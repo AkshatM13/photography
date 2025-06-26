@@ -43,7 +43,7 @@ function Home() {
             <div id="portfolio" className="container mb-5">
                 <div className="text-center mb-5">
                     <h2 className="display-5 mb-3">My Portfolio</h2>
-                    <p className="lead text-muted">A showcase of my recent work</p>
+                    <p className="lead">A showcase of my recent work</p>
                 </div>
                 <Photography />
             </div>
