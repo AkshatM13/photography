@@ -32,7 +32,7 @@ function About() {
                                 <h3 className="mb-4">My Story</h3>
                                 <p className="mb-3">
                                     Welcome to my world of photography! I'm Akshat, a passionate photographer 
-                                    based in Mumbai with over 5 years of experience capturing life's most 
+                                    based in Banglore with over 5 years of experience capturing life's most 
                                     precious moments.
                                 </p>
                                 <p className="mb-3">
