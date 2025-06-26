@@ -19,18 +19,18 @@ function Footer() {
                         <p className="mb-2">
                             <i className="fas fa-envelope me-2"></i>
                             <a href="mailto:akshat@gmail.com" className="text-light text-decoration-none">
-                                akshat@gmail.com
+                                frametheorybyakshat@gmail.com
                             </a>
                         </p>
                         <p className="mb-2">
                             <i className="fas fa-phone me-2"></i>
                             <a href="tel:+919876543210" className="text-light text-decoration-none">
-                                +91 98765 43210
+                                +91 
                             </a>
                         </p>
                         <p className="mb-0">
                             <i className="fas fa-map-marker-alt me-2"></i>
-                            Mumbai, India
+                            Bengaluru, India
                         </p>
                     </div>
                     
@@ -47,7 +47,7 @@ function Footer() {
                                 Instagram
                             </a>
                             <a 
-                                href="https://facebook.com/akshatphotography" 
+                                href="https://www.fb.com/l/6lp1kJRRR" 
                                 className="btn btn-outline-light btn-sm"
                                 target="_blank" 
                                 rel="noopener noreferrer"

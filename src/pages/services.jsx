@@ -47,7 +47,7 @@ function Services() {
         <div className="container my-5">
             <div className="text-center mb-5">
                 <h2 className="display-4 mb-3">My Services</h2>
-                <p className="lead text-muted">Professional photography services tailored to your needs</p>
+                <p className="lead">Professional photography services tailored to your needs</p>
             </div>
             
             <div className="row">

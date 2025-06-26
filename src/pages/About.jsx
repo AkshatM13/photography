@@ -5,8 +5,8 @@ function About() {
             <div className="row">
                 <div className="col-lg-10 mx-auto">
                     <div className="text-center mb-5">
-                        <h2 className="display-4 mb-3">About Me</h2>
-                        <p className="lead text-muted">Capturing life's beautiful moments</p>
+                        <h2 className="display-4 mb-3" style={{ color: 'white' }}>About Me</h2>
+                        <p className="lead" style={{ color: 'white' }}>Capturing life's beautiful moments </p>
                     </div>
                     
                     <div className="row align-items-center">
@@ -48,15 +48,15 @@ function About() {
                                 <div className="row text-center">
                                     <div className="col-4">
                                         <h4 className="text-primary">500+</h4>
-                                        <small className="text-muted">Happy Clients</small>
+                                        <small className="lead" style={{ color: 'white' }}>Happy Clients</small>
                                     </div>
                                     <div className="col-4">
                                         <h4 className="text-primary">50+</h4>
-                                        <small className="text-muted">Weddings</small>
+                                        <small className="lead" style={{ color: 'white' }}>Weddings</small>
                                     </div>
                                     <div className="col-4">
                                         <h4 className="text-primary">5+</h4>
-                                        <small className="text-muted">Years Experience</small>
+                                        <small className="lead" style={{ color: 'white' }}>Years Experience</small>
                                     </div>
                                 </div>
                             </div>

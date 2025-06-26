@@ -11,7 +11,7 @@ function Home() {
                         <div className="col-lg-6">
                             <h1 className="display-3 fw-bold mb-4 text-white">
                                 Capturing Life's
-                                <span className="d-block gradient-text">
+                                <span className="d-block text-white">
                                     Beautiful Moments
                                 </span>
                             </h1>
