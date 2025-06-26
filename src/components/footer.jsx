@@ -10,7 +10,7 @@ function Footer() {
                         </h5>
                         <p className="text-light opacity-75">
                             Capturing life's beautiful moments with creativity and passion. 
-                            Based in Mumbai, serving clients worldwide.
+                            Based in Banglore, serving clients worldwide.
                         </p>
                     </div>
                     

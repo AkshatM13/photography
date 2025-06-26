@@ -760,61 +760,19 @@ footer.bg-light * {
   background: #f0f0f0 !important;
 }
 
-/* Additional text color fixes for specific sections */
-
-/* Home page hero section text */
-.hero-section .tagline,
-.hero-section .subtitle {
-  color: #ffffff !important;
-}
-
-/* About section comprehensive fix */
-#about h1,
-#about h2,
-#about h3,
-#about p,
-#about .lead,
-#about span,
-#about div {
-  color: #ffffff !important;
-}
-
-/* Stats counters - Happy Clients, Weddings, Years Experience */
-.counter,
-.stat-number,
-.achievement {
-  color: #ffffff !important;
-}
-
-.counter h2,
-.counter h3,
-.stat-number h2,
-.stat-number h3 {
-  color: #ffffff !important;
-}
-
-.counter p,
-.stat-number p {
-  color: #ffffff !important;
-}
-
-/* Services section intro text */
-.services-header p,
-.services-intro p {
-  color: #ffffff !important;
-}
-
-/* White background buttons with black text */
+/* Always black text for Get Custom Quote button in services */
 .btn-light,
-.btn-outline-primary.custom-quote {
-  background: #ffffff !important;
+.btn.btn-light,
+.btn.btn-light.btn-lg {
   color: #000000 !important;
-  border: 1px solid #ffffff !important;
+  background: #ffffff !important;
+  border: none !important;
 }
 
 .btn-light:hover,
-.btn-outline-primary.custom-quote:hover {
-  background: #f0f0f0 !important;
+.btn.btn-light:hover,
+.btn.btn-light.btn-lg:hover {
   color: #000000 !important;
-  border: 1px solid #f0f0f0 !important;
+  background: #f0f0f0 !important;
+  border: none !important;
 }
