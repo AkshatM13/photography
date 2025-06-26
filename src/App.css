@@ -1,0 +1,820 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Root Variables for Dark Theme */
+:root {
+  --bg-primary: #000000 !important;
+  --bg-secondary: #1d1d1f !important;
+  --bg-tertiary: #2d2d30 !important;
+  --text-primary: #f5f5f7 !important;
+  --text-secondary: #a1a1a6 !important;
+  --accent-blue: #007aff;
+  --accent-purple: #af52de;
+  --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-primary) !important;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.1) 0%, transparent 50%) !important;
+  color: var(--text-primary) !important;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
+  border-radius: 4px;
+}
+
+/* Navbar Dark Theme */
+.navbar {
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.navbar-brand {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  font-size: 1.5rem !important;
+}
+
+.navbar-brand:hover {
+  color: var(--accent-blue) !important;
+}
+
+.nav-link {
+  color: var(--text-secondary) !important;
+  font-weight: 400;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--text-primary) !important;
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background: var(--accent-gradient);
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+  background: var(--accent-gradient) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%);
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  color: white !important;
+}
+
+.hero-section .lead {
+  font-weight: 300;
+  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.hero-section img {
+  transition: var(--transition);
+  filter: brightness(1.1) contrast(1.1);
+}
+
+.hero-section img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2) contrast(1.2);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 50px;
+  padding: 12px 32px;
+  font-weight: 500;
+  transition: var(--transition);
+  border: none;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  color: white !important;
+}
+
+.btn-primary {
+  background: var(--accent-gradient);
+  border: none;
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.btn-outline-light {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #000000 !important;
+  background: var(--accent-gradient) !important;
+  backdrop-filter: blur(10px);
+}
+
+.btn-outline-light:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  color: #000000 !important;
+}
+
+/* Home page specific styling fixes */
+.home-page .btn-outline-light {
+  color: #000000 !important;
+  background: var(--accent-gradient) !important;
+  border: 2px solid transparent !important;
+}
+
+.home-page .btn-outline-light:hover {
+  color: #000000 !important;
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+  border: 2px solid transparent !important;
+}
+
+/* View Portfolio button specific styling */
+.btn-outline-light.portfolio-btn,
+button[href*="portfolio"],
+.portfolio-button {
+  color: #000000 !important;
+  background: var(--accent-gradient) !important;
+  border: none !important;
+}
+
+.btn-outline-light.portfolio-btn:hover,
+button[href*="portfolio"]:hover,
+.portfolio-button:hover {
+  color: #000000 !important;
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px !important;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: var(--shadow);
+}
+
+.card-body {
+  color: #ffffff !important;
+}
+
+.card-title {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+.card-text {
+  color: #ffffff !important;
+}
+
+/* Photo Gallery */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 20px 0;
+}
+
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border);
+  transition: var(--transition);
+}
+
+.photo-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: var(--transition);
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.photo-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1) contrast(1.2);
+}
+
+/* Text Colors - Force White Text */
+.text-muted {
+  color: #a1a1a6 !important;
+}
+
+.text-primary {
+  color: var(--accent-blue) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.display-3, .display-4, .display-5 {
+  color: #ffffff !important;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: #f5f5f7 !important;
+}
+
+span {
+  color: inherit !important;
+}
+
+/* Gradient Text Fix */
+.gradient-text {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Background Colors */
+.bg-light {
+  background: var(--bg-secondary) !important;
+}
+
+.bg-dark {
+  background: var(--bg-primary) !important;
+}
+
+/* Contact Form */
+.form-control {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  background: var(--card-bg);
+  border-color: var(--accent-blue);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 0.2rem rgba(0, 122, 255, 0.25);
+}
+
+.form-control::placeholder {
+  color: var(--text-secondary);
+}
+
+.form-select {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+  border-radius: 12px;
+}
+
+.form-select:focus {
+  background: var(--card-bg);
+  border-color: var(--accent-blue);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 0.2rem rgba(0, 122, 255, 0.25);
+}
+
+.form-label {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  background: var(--bg-secondary) !important;
+  border-top: 1px solid var(--card-border);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container > * {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Icon Styling */
+.fas, .fab {
+  transition: var(--transition);
+}
+
+.text-primary .fas, .text-primary .fab {
+  color: var(--accent-blue);
+}
+
+/* Button Hover Effects */
+.btn-outline-primary {
+  border: 2px solid var(--accent-blue);
+  color: var(--accent-blue);
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background: var(--accent-blue);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 122, 255, 0.4);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  border: none;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #20c997 0%, #28a745 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+}
+
+.btn-outline-light {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+/* Services Page Styling */
+.services-page {
+  background: var(--bg-primary);
+}
+
+/* Services Page Text Styling - Force White/Blue Colors */
+.services-page h1,
+.services-page h2,
+.services-page h3,
+.services-page h4,
+.services-page h5,
+.services-page h6 {
+  color: #ffffff !important;
+}
+
+.services-page p,
+.services-page .lead {
+  color: #ffffff !important;
+}
+
+.services-page small {
+  color: #ffffff !important;
+}
+
+.services-page li {
+  color: #ffffff !important;
+}
+
+.services-page .card-text {
+  color: #ffffff !important;
+}
+
+.services-page .text-muted {
+  color: #a1a1a6 !important;
+}
+
+/* Contact Page Text Styling - Force White/Blue Colors */
+.contact-page h1,
+.contact-page h2,
+.contact-page h3,
+.contact-page h4,
+.contact-page h5,
+.contact-page h6 {
+  color: #ffffff !important;
+}
+
+.contact-page p,
+.contact-page .lead {
+  color: #ffffff !important;
+}
+
+.contact-page small {
+  color: #ffffff !important;
+}
+
+.contact-page li {
+  color: #ffffff !important;
+}
+
+.contact-page .card-text {
+  color: #ffffff !important;
+}
+
+.contact-page .text-muted {
+  color: #a1a1a6 !important;
+}
+
+/* General small element styling */
+small {
+  color: #ffffff !important;
+}
+
+/* List items in cards */
+.card li {
+  color: #ffffff !important;
+}
+
+.card small {
+  color: #ffffff !important;
+}
+
+/* Service features specific styling */
+.list-unstyled li {
+  color: #ffffff !important;
+}
+
+.list-unstyled small {
+  color: #ffffff !important;
+}
+
+/* Force all text elements to be white for visibility */
+* {
+  color: inherit;
+}
+
+body * {
+  color: #ffffff !important;
+}
+
+/* Override any remaining transparent or black text */
+.card-text,
+.card p,
+.card span,
+.card div {
+  color: #ffffff !important;
+}
+
+/* Professional headshots text and similar descriptions */
+.card-body p {
+  color: #ffffff !important;
+}
+
+.card-body .card-text {
+  color: #ffffff !important;
+}
+
+.card-body span {
+  color: #ffffff !important;
+}
+
+/* Hero section text - ensure all text is white */
+.hero-section * {
+  color: #ffffff !important;
+}
+
+.hero-section p {
+  color: #ffffff !important;
+}
+
+.hero-section span {
+  color: #ffffff !important;
+}
+
+/* Override Bootstrap and other framework defaults */
+.text-inherit {
+  color: #ffffff !important;
+}
+
+/* Ensure service feature text is visible */
+.card .list-unstyled li small {
+  color: #ffffff !important;
+  font-weight: 400;
+}
+
+/* Make sure all paragraph text is white */
+body p {
+  color: #ffffff !important;
+}
+
+/* All span elements */
+body span {
+  color: #ffffff !important;
+}
+
+/* All div text content */
+body div {
+  color: #ffffff !important;
+}
+
+/* Price text in services */
+.h5 {
+  color: var(--accent-blue) !important;
+}
+
+/* Button text should remain as designed */
+.btn {
+  color: white !important;
+}
+
+.btn-primary {
+  color: white !important;
+}
+
+/* White background sections - make text black for readability */
+.bg-white,
+.bg-white *,
+.bg-light,
+.bg-light * {
+  color: #000000 !important;
+}
+
+/* Custom quote section or any white background area */
+.white-bg,
+.white-bg *,
+.custom-quote,
+.custom-quote *,
+.quote-section,
+.quote-section * {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Call-to-action sections that might have light backgrounds */
+.cta-section,
+.cta-section * {
+  color: #000000 !important;
+}
+
+/* Override white text in white background areas */
+.bg-white h1,
+.bg-white h2,
+.bg-white h3,
+.bg-white h4,
+.bg-white h5,
+.bg-white h6,
+.bg-light h1,
+.bg-light h2,
+.bg-light h3,
+.bg-light h4,
+.bg-light h5,
+.bg-light h6 {
+  color: #000000 !important;
+}
+
+.bg-white p,
+.bg-white span,
+.bg-white div,
+.bg-light p,
+.bg-light span,
+.bg-light div {
+  color: #000000 !important;
+}
+
+/* Ensure buttons on white backgrounds have proper contrast */
+.bg-white .btn,
+.bg-light .btn {
+  color: #ffffff !important;
+}
+
+/* Footer text adjustments if it has light background */
+footer.bg-light,
+footer.bg-light * {
+  color: #000000 !important;
+}
+
+/* Final override for all remaining text visibility issues */
+.card .card-body *,
+.services-page *,
+.contact-page *,
+.hero-section * {
+  color: #ffffff !important;
+}
+
+/* Specific overrides for common problematic elements */
+.card-body p,
+.card-body span,
+.card-body div,
+.card-body small,
+.card-body li {
+  color: #ffffff !important;
+}
+
+/* Professional headshots and similar descriptive text */
+.card .card-text,
+.card p.card-text {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Service descriptions */
+.services-page .card-text,
+.services-page p {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* About section text fixes */
+.about-section h1,
+.about-section h2,
+.about-section h3 {
+  color: #ffffff !important;
+}
+
+.about-section p,
+.about-section .lead {
+  color: #ffffff !important;
+}
+
+/* "Capturing life's beautiful moments" text */
+.tagline,
+.hero-tagline,
+.about-tagline {
+  color: #ffffff !important;
+}
+
+/* Stats section - Happy Clients, Weddings, Years Experience */
+.stats-section,
+.stats-section * {
+  color: #ffffff !important;
+}
+
+.stats-item h3,
+.stats-item h4,
+.stats-item .number {
+  color: #ffffff !important;
+}
+
+.stats-item p,
+.stats-item .label {
+  color: #ffffff !important;
+}
+
+/* Professional photography services text */
+.services-intro,
+.services-description {
+  color: #ffffff !important;
+}
+
+/* Get Custom Quote button - black text */
+.btn-custom-quote,
+.custom-quote-btn,
+.quote-btn {
+  color: #000000 !important;
+  background: #ffffff !important;
+}
+
+.btn-custom-quote:hover,
+.custom-quote-btn:hover,
+.quote-btn:hover {
+  color: #000000 !important;
+  background: #f0f0f0 !important;
+}
+
+/* Additional text color fixes for specific sections */
+
+/* Home page hero section text */
+.hero-section .tagline,
+.hero-section .subtitle {
+  color: #ffffff !important;
+}
+
+/* About section comprehensive fix */
+#about h1,
+#about h2,
+#about h3,
+#about p,
+#about .lead,
+#about span,
+#about div {
+  color: #ffffff !important;
+}
+
+/* Stats counters - Happy Clients, Weddings, Years Experience */
+.counter,
+.stat-number,
+.achievement {
+  color: #ffffff !important;
+}
+
+.counter h2,
+.counter h3,
+.stat-number h2,
+.stat-number h3 {
+  color: #ffffff !important;
+}
+
+.counter p,
+.stat-number p {
+  color: #ffffff !important;
+}
+
+/* Services section intro text */
+.services-header p,
+.services-intro p {
+  color: #ffffff !important;
+}
+
+/* White background buttons with black text */
+.btn-light,
+.btn-outline-primary.custom-quote {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff !important;
+}
+
+.btn-light:hover,
+.btn-outline-primary.custom-quote:hover {
+  background: #f0f0f0 !important;
+  color: #000000 !important;
+  border: 1px solid #f0f0f0 !important;
+}
