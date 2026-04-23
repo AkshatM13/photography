@@ -17,7 +17,7 @@ flowchart TD
     A_Fallback[(Historian Fallback\n10.10.135.36:1433)]
     
     subgraph Core ETL Engine [Python Pipeline]
-        方向 TB
+        direction TB
         B[fetch_from_historian.py\nDelta Fetch & Failover]
         C[utils/data_processing_utils.py\nclean_and_resample]
         D[subsystems/<sys>/preprocessing.py\nFeature Eng & Math]
