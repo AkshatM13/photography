@@ -47,7 +47,7 @@ flowchart TD
     E --> G
     E --> H
     
-    B <..> |Time Window Check| Z
+    B -.-> |Time Window Check| Z
     
     F -.- M
     G -.- M
